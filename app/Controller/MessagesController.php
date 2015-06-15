@@ -1,11 +1,11 @@
 <?php
-class UsersController extends AppController {
+class MessagesController extends AppController {
     public $helpers = array('Html', 'Form','Session');
     public $components = array('Session');
 
 
 	public function index() {
-	        $this->set('users', $this->Category->find('all'));
+	        $this->set('messages', $this->Category->find('all'));
 	    }
 
 
