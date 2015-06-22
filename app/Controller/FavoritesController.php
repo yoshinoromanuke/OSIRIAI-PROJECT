@@ -5,7 +5,7 @@ class FavoritesController extends AppController {
 
 
 	public function index() {
-	        $this->set('favorites', $this->Category->find('all'));
+	        $this->set('favorites', $this->Favorite->find('all'));
 	    }
 
 

@@ -5,7 +5,7 @@ class PhotosController extends AppController {
 
 
 	public function index() {
-	        $this->set('photos', $this->Category->find('all'));
+	        $this->set('photos', $this->Photo->find('all'));
 	    }
 
 

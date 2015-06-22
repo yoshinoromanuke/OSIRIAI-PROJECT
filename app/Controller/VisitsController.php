@@ -5,7 +5,7 @@ class VisitsController extends AppController {
 
 
 	public function index() {
-	        $this->set('visits', $this->Category->find('all'));
+	        $this->set('visits', $this->Visit->find('all'));
 	    }
 
 

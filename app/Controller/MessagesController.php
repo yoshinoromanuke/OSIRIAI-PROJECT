@@ -5,7 +5,7 @@ class MessagesController extends AppController {
 
 
 	public function index() {
-	        $this->set('messages', $this->Category->find('all'));
+	        $this->set('messages', $this->Message->find('all'));
 	    }
 
 

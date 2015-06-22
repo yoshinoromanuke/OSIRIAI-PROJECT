@@ -5,7 +5,7 @@ class WinnersController extends AppController {
 
 
 	public function index() {
-	        $this->set('winners', $this->Category->find('all'));
+	        $this->set('winners', $this->Winner->find('all'));
 	    }
 
 

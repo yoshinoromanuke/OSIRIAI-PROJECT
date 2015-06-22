@@ -74,7 +74,7 @@ class DATABASE_CONFIG {
         'host' => 'localhost',
         'login' => 'root',  // <-ユーザー名☆☆☆
         'password' => 'yoshi117', // <- パスワード☆☆☆
-        'database' => 'cakephp', // <- DB名☆☆☆
+        'database' => 'Osiriai', // <- DB名☆☆☆
         'prefix' => '',
         //'encoding' => 'utf8',
     );
