@@ -8,15 +8,13 @@
                 <div class="game-title__txt">
                     <div>                 
                         <h1 class="inline">
-                            <span class="game-title__name">Yoshiro</span><span>, 23</span>
+                            <span class="game-title__name"><?php echo $myFbData['name']; ?></span><span>, 23</span>
                             <a href="/01332365577" class="b-link app" rel="big-photo-view"></a>
                         </h1>
                         
 
                         
-                        <i class="inline ico ico--verify tooltip-wrap">
-                            <span class="tooltip"><span class="tooltip-txt">プロフィール認証済</span></span>
-                        </i>
+                        
                     </div>
 
                     <div class="common-info-wrap">
@@ -29,11 +27,8 @@
                                     <div class="loader loader--sm">
                                         <div class="loader_"></div>
                                     </div>
-                                    <span class="common-info__count-cnt js-profile-header-shared-friends-num">3</span>
                                 </div>
-                                <span>
-                                     あなたの<br>友達
-                                </span>
+                                
                             
                                 <a href="/01332365577" class="b-link app" rel="big-photo-view"></a>
                             </div>
@@ -45,20 +40,22 @@
                 <div class="profile-menu js-wrap">
                 
                     <div class="btn btn--white btn--ico tooltip-wrap">
-                        <i class="icon ico--cog"></i>
+                        <!-- <i class="icon ico--cog"></i> -->
+                        
+                        <a href="/OSIRIAI_PROJECT/users/config"><i class="glyphicon glyphicon-cog"></i></a>
                         <div class="tooltip bc"><span class="tooltip-txt">設定</span></div>
-                        <a href="/settings" class="b-link app" rel="settings"></a>
+                        <!-- <a href="/settings" class="b-link app" rel="settings"></a> -->
                     </div>
 
 
-                    <div class="btn btn--white btn--ico active tooltip-wrap">
+<!--                     <div class="btn btn--white btn--ico active tooltip-wrap">
                         <i class="icon ico--profile"></i>
                         <div class="tooltip bc"><span class="tooltip-txt">プロフィール</span></div>
                         
                             <a href="/01332365577" class="b-link app" rel="big-photo-view"></a>
                         
                     </div>
-
+ -->
                 </div>
             </div>
             <span class="middle">
@@ -71,7 +68,7 @@
             <section class="profile-section__photo-list"> 
                 <figure id="photo_list" class="photo-list js-wrap gallery_has_arrows">  
                     
-<!-- 追加を含めた写真のリスト作成 -->
+                    <!-- 写真を追加 -->
                     <div class="photo-list__action-bar js-upload-wrap"> 
                         <!-- Default photo -->
                         <div class="photo-list__item photo-list__item--add-photos"> 
@@ -84,239 +81,60 @@
                                 </span>
                                 <span class="middle"></span> 
                             </div> 
-                        </div>
-                        <!-- Private photo -->
-                        <!-- Video -->
-                        <div class="photo-list__item photo-list__item--add-videos js-video-upload-button"> 
-                            <div class="photo-list__action"> 
-                                <span class="inline"> 
-                                    <i class="ico ico--lg ico--video-up">
-                                        <span class="b-link js-upload-import" data-type="open" data-context="video" data-provider-id="instagram">
-                                        </span>
-                                    </i> 
-                                    <b class="photo-list__action-title">動画を追加</b> 
-                                </span>
-                                <span class="middle"></span> 
-                            </div> 
-                        </div>
-                        <!-- -->
-                        <div class="photo-list__item photo-list__item--video-progress"> 
-                            <div class="photo-list__action"> 
-                                <span class="inline"> 
-                                    <i class="ico ico--lg ico--processing"></i> 
-                                    <b class="photo-list__action-title">動画の処理中</b> 
-                                </span>
-                                <span class="middle"></span> 
-                            </div> 
-                            <span class="blocker"></span> 
-                        </div> 
+                        </div>                        
                     </div>  
+<!-- 個別写真を並べていく -->
                     <div class="photo-list__photo-bar js-gallery-photos-wrap"> 
                         <div class="photo-list__slide js-gallery-photos" style="transform: translate(0px, 0px);">
                             
-							<!-- 個別写真 -->
+							
+                           <!--  <ul>
+                                <?php //foreach(): ?>
+                                <li> -->
+<!-- １枚目 -->              
                             <div class="photo-list__item js-photo js-wrap" data-id="1311341939">
                                 <img src="//pcache-pv-us1.honcdn.com/p525/784/5/4/3/1332365577/d1311341/t1432875608/c_D4tgJNbUjsVC7k.oluZ.sqvLFeOR-owfSok7QF8DaJs/1311341939_192.jpg?t=24.0.0.0&amp;id=1311341939" alt="" width="160" height="160" class="photo-list__img">
-
-                                <div class="photo-list__link">
-                                    
-                                    <span class="b-link js-gallery-img" data-id="1311341939"></span>
-                                </div>
-
-                                <div class="photo-list__nav js-gallery-img" data-id="1311341939">
-                                    <div class="photo-list__nav-action" data-id="1311341939">                                        
-                                        <div class="photo-list__default-photo active">
-                                            
-                                            <div class="btn btn--sm btn--transparent btn--ico tooltip-wrap js-default-photo-btn">
-                                                <i class="icon ico--white ico--user">
-                                                    <span class="b-link js-gallery-default" data-id="1311341939"></span>
-                                                </i>
-                                                <div class="tooltip" data-drop-direction="true">
-                                                    <span class="tooltip-txt">デフォルト写真に設定</span>
-                                                </div>
-                                            </div>
-
-                                            <div class="btn btn--sm btn--transparent btn--ico tooltip-wrap active">
-                                                <i class="icon ico--white ico--user"></i>
-                                                <div class="tooltip" data-drop-direction="true">
-                                                    <span class="tooltip-txt">あなたのデフォルト写真</span></div>
-                                            </div>
-
-                                        </div>
-                                                        
-                                        <div class="btn btn--sm btn--transparent btn--ico tooltip-wrap">
-                                            <i class="icon ico--trash">
-                                                <span class="b-link js-toggle" data-jst-type="popup" data-jst-class="photo-list__item--delete" data-id="1311341939"></span>
-                                            </i>
-                                            <div class="tooltip" data-drop-direction="true"><span class="tooltip-txt">写真を削除</span></div>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-
-                                <div class="photo-list__photo-coaching">
-                                    <div class="photo-coaching photo-coaching--sm photo-coaching--empty tooltip-wrap" data-id="1311341939">
-                                        <div class="photo-coaching__star" data-id="1311341939"></div>
-                                        <div class="tooltip" data-drop-direction="true"><span class="tooltip-txt"></span></div>
-                                    </div>
-                                </div>
-                                    
-                                <div class="photo-list__action photo-list__action--delete">
-                                    <div class="inline">
-                                        <i class="ico ico--lg ico--white ico--trash-lg"></i>
-                                        <b class="photo-list__action-title">写真を削除</b>
-                                        <span class="b-link js-gallery-delete" data-id="1311341939"></span>
-                                    </div><span class="middle"></span>
-                                </div>
-                                <!-- トップ写真は星の評価を見ることができるからここに記述なし -->
                             </div>
-
+<!-- ２枚目 -->
                             <div class="photo-list__item js-photo js-wrap" data-id="1311341915">
-                                <img src="//pcache-pv-us1.honcdn.com/p525/784/5/4/3/1332365577/d1311341/t1432875628/c_16HrA08U0y-I1zAQTddMumuwy3XsGURivRYQV9tK2E8/1311341915_192.jpg?t=24.0.0.0&amp;id=1311341915" alt="" width="160" height="160" class="photo-list__img">
-
-                                <div class="photo-list__link">
-        
-                                    <span class="b-link js-gallery-img" data-id="1311341915"></span>
-                                </div>
-
-                                <div class="photo-list__nav js-gallery-img" data-id="1311341915">
-                                    <div class="photo-list__nav-action" data-id="1311341915">
-                                        
-                                        <div class="photo-list__default-photo ">
-                                            <div class="btn btn--sm btn--transparent btn--ico tooltip-wrap js-default-photo-btn">
-                                                <i class="icon ico--white ico--user"><span class="b-link js-gallery-default" data-id="1311341915"></span></i>
-                                                <div class="tooltip" data-drop-direction="true"><span class="tooltip-txt">デフォルト写真に設定</span></div>
-                                            </div>
-                                            <div class="btn btn--sm btn--transparent btn--ico tooltip-wrap active">
-                                                <i class="icon ico--white ico--user"></i>
-                                                <div class="tooltip" data-drop-direction="true"><span class="tooltip-txt">あなたのデフォルト写真</span></div>
-                                            </div>
-                                        </div>
-                                        
-
-            
-                
-                                        <div class="btn btn--sm btn--transparent btn--ico tooltip-wrap">
-                                            <i class="icon ico--trash"><span class="b-link js-toggle" data-jst-type="popup" data-jst-class="photo-list__item--delete" data-id="1311341915"></span></i>
-                                            <div class="tooltip" data-drop-direction="true"><span class="tooltip-txt">写真を削除</span></div>
-                                        </div>
-                                        
-            
-                                    </div>
-                                </div>
-                                  <!-- 下にある星による評価ページ -->
-                                <div class="photo-list__photo-coaching">
-                                    <div class="photo-coaching photo-coaching--sm photo-coaching--empty tooltip-wrap" data-id="1311341915">
-                                        <div class="photo-coaching__star" data-id="1311341915"></div>
-                                        <div class="tooltip" data-drop-direction="true"><span class="tooltip-txt">あなたの写真評価を見るには、さらに46投票必要です。</span></div>
-                                    </div>
-                                </div>
-    
-
-    
-
-    
-                                <div class="photo-list__action photo-list__action--delete">
-                                    <div class="inline">
-                                        <i class="ico ico--lg ico--white ico--trash-lg"></i>
-                                        <b class="photo-list__action-title">写真を削除</b>
-                                        <span class="b-link js-gallery-delete" data-id="1311341915"></span>
-                                    </div><span class="middle"></span>
-                                </div>
-    
-
-    
+                                <img src="//pcache-pv-us1.honcdn.com/p525/784/5/4/3/1332365577/d1311341/t1432875628/c_16HrA08U0y-I1zAQTddMumuwy3XsGURivRYQV9tK2E8/1311341915_192.jpg?t=24.0.0.0&amp;id=1311341915" alt="" width="160" height="160" class="photo-list__img">          
                             </div>
+<!-- ３枚目 -->
 
                             <div class="photo-list__item js-photo js-wrap" data-id="1311341917">
                                 <img src="//pcache-pv-us1.honcdn.com/p525/784/5/4/3/1332365577/d1311341/t1432875628/c_K24WM6Egj-HLFKNH9PFMSujquTif6e7.9OPSsWfclmo/1311341917_192.jpg?t=24.0.0.0&amp;id=1311341917" alt="" width="160" height="160" class="photo-list__img">
-
-                                <div class="photo-list__link">
-                                    
-                                    <span class="b-link js-gallery-img" data-id="1311341917"></span>
-                                </div>
-
-                                <div class="photo-list__nav js-gallery-img" data-id="1311341917">
-                                    <div class="photo-list__nav-action" data-id="1311341917">
-                                        
-                                        <div class="photo-list__default-photo ">
-                                            <div class="btn btn--sm btn--transparent btn--ico tooltip-wrap js-default-photo-btn">
-                                                <i class="icon ico--white ico--user"><span class="b-link js-gallery-default" data-id="1311341917"></span></i>
-                                                <div class="tooltip" data-drop-direction="true"><span class="tooltip-txt">デフォルト写真に設定</span></div>
-                                            </div>
-                                            <div class="btn btn--sm btn--transparent btn--ico tooltip-wrap active">
-                                                <i class="icon ico--white ico--user"></i>
-                                                <div class="tooltip" data-drop-direction="true"><span class="tooltip-txt">あなたのデフォルト写真</span></div>
-                                            </div>
-                                        </div>
-                                        
-
-                                        
-                                            
-                                            <div class="btn btn--sm btn--transparent btn--ico tooltip-wrap">
-                                                <i class="icon ico--trash"><span class="b-link js-toggle" data-jst-type="popup" data-jst-class="photo-list__item--delete" data-id="1311341917"></span></i>
-                                                <div class="tooltip" data-drop-direction="true"><span class="tooltip-txt">写真を削除</span></div>
-                                            </div>
-                                            
-                                        
-                                    </div>
-                                </div>
-
-                                <div class="photo-list__photo-coaching">
-                                    <div class="photo-coaching photo-coaching--sm photo-coaching--empty tooltip-wrap" data-id="1311341917">
-                                        <div class="photo-coaching__star" data-id="1311341917"></div>
-                                        <div class="tooltip" data-drop-direction="true"><span class="tooltip-txt">あなたの写真評価を見るには、さらに48投票必要です。</span></div>
-                                    </div>
-                                </div>
-    
-
-    
-
-    
-                                <div class="photo-list__action photo-list__action--delete">
-                                    <div class="inline">
-                                        <i class="ico ico--lg ico--white ico--trash-lg"></i>
-                                        <b class="photo-list__action-title">写真を削除</b>
-                                        <span class="b-link js-gallery-delete" data-id="1311341917"></span>
-                                    </div><span class="middle"></span>
-                                </div>
                             </div>
                     
                         </div>
                     </div>
-                    <span class="photo-counter photo-list__counter js-gallery-counter">
-                        <i class="icon ico--white ico--camera"></i>
-                        <span class="js-gallery-photo-total">8</span>
-                    </span>    
-                    <div class="btn btn--sm btn--transparent btn--ico photo-list__arrow-l js-gallery-prev-page-container hidden">
-                        <i class="icon ico--white ico--arrow-l">
-                            <span class="b-link js-gallery-prev-page"></span>
-                        </i>
-                    </div> 
-                    <div class="btn btn--sm btn--transparent btn--ico photo-list__arrow-r js-gallery-next-page-container">
-                        <i class="icon ico--white ico--arrow-r">
-                            <span class="b-link js-gallery-next-page"></span>
-                        </i>
-                    </div>    
-                <!-- ここが原因？</div> -->   
+
+
+<!-- 消去する写真のナンバー表示機能を削除した -->
                 </figure>   
             </section>
         </div> 
+
+
+<!-- プロフィール項目を表示（仕事＆学歴、）  -->
 <section class="section-left-side"> 
-	<!-- １ボックス目　 -->
+
+<!-- １ボックス目　 -->
 	<div class="js-profile-education">
 		<div class="section section--profile js-editable-section">  
 			<h2>    仕事＆学歴</h2>  
-			<div class="inline btn btn--sm btn--white btn--ico btn-edit js-editable-section-btn">
-				<i class="icon ico--pencil"></i>
+			<!-- <div class="inline btn btn--sm btn--white btn--ico btn-edit js-editable-section-btn">
+				<a href="/OSHIRIAI/users/config">
+                <i class="glyphicon glyphicon-cog"></i>
+                </a>
+
 				<span class="b-link js-editable-section-toggle" data-section-type="work-education"></span>
-			</div> 
+			</div>  -->
 			<div class="section-editable"> 
 				<div class="section-editable__view">   
-					<div>比叡山高等学校，2010</div>      
+					<div><?php echo $myFbData['education']['0']['school']['name']; echo $myFbData['education']['0']['year']['name'];?></div>      
 				</div>  
-				<!-- 鉛筆アイコン押した時の挙動 -->
+<!-- 鉛筆アイコン押した時の挙動。まずはこの機能を削除しておく。アップデート予定 -->
+<!-- 
 				<div class="section-editable__edit"> 
 					<form method="post" action="" class="form">  
 						
@@ -345,12 +163,13 @@
 							<div class="table-cell"> 
 								<div class="select select--sm" data-control-type="select"> 
 									<input type="hidden" name="university_id" value="1311341956" class="select-value"> 
-									<div tabindex="0" class="select-label">比叡山高等学校，2010</div> 
+									<div tabindex="0" class="select-label"><?php //echo $myFbData['education']['0']['school']['name']; echo $myFbData['education']['0']['year']['name'];?></div> 
 									<div class="select-options"> 
+                                         プルダウンメニューから簡単に学歴を変更可能 
 										<ul class="options"> 
-											<li class="option" data-value="1311341958">京都大学大学院情報学研究科，2016</li>
-											<li class="option" data-value="1311341957">Kyoto University，2014</li>
-											<li class="option" data-value="1311341956">比叡山高等学校，2010</li>
+											<li class="option" data-value="1311341958"><?php //echo $myFbData['education']['1']['school']['name']; echo $myFbData['education']['1']['year']['name'];?></li>
+											<li class="option" data-value="1311341957"><?php //echo $myFbData['education']['2']['school']['name']; echo $myFbData['education']['2']['year']['name'];?></li>
+											
 											<li class="option" data-value="None">なし － 表示しない</li> 
 										</ul> 
 									</div> 
@@ -368,28 +187,31 @@
 							</div> 
 						</div> 
 					</form> 
-				</div>  
+				</div>
+                 -->
 			</div> 
 		</div> 
 	</div> 
+<!-- 1ボックス目終わり -->
 
-	<!-- ２ボックス目 現在地から居住地に変えるからformとか必要ないよね？facebookから得られた情報を表示させるだけ-->
+<!-- ２ボックス目 現在地から居住地に変えるからformとか必要ないよね？facebookから得られた情報を表示させるだけ-->
 	<div class="js-profile-location">
 		<div class="section section--profile js-editable-section"> 
-			<h2>居住地</h2> 
+			<h2>出身地</h2> 
 			<div class="inline btn btn--sm btn--white btn--ico btn-edit js-editable-section-btn">
 				<i class="icon ico--pencil"></i>
 				<span class="b-link js-editable-section-toggle" data-section-type="location"></span>
 			</div> 
 			<div class="section-editable"> 
 				<div class="section-editable__view"> 
-					<span class="js-location-label"> Banilad Heights      
+					<span class="js-location-label"> <?php echo $myFbData['hometown']['name']; ?>   
 					</span> 
 				</div>  
 
-				<!-- ボタンを押した後の画面 -->
+<!-- ボタンを押した後の画面、アップデート予定-->
+<!-- 
 				<div class="section-editable__edit"> 
-					<!-- class=tableとして見た目をテーブルのように整えてる -->
+					 class=tableとして見た目をテーブルのように整えてる
 					<form method="post" action="/profile/undefined/ws/location/change" class="table"> 
 						<div class="table-cell">    
 							<div class="search-field js-location-list" data-client-side="" data-url="" data-control-type="location-list"> 
@@ -408,7 +230,7 @@
 										</div> 
 									</div> 
 								</div>   
-								<!-- どういう意味が？？？ -->
+								
 								<div class="input-error"></div>  
 							</div>    
 						</div> 
@@ -423,15 +245,18 @@
 						</div> 
 					</form> 
 				</div>  
-
+ -->
 			</div> 
 		</div> 
 	</div> 
+<!-- ２ボックス目終わり -->
 
+<!-- ３ボックス目、アップデートで追加予定 -->
+    <!-- 
 	<div class="js-profile-iht">
 		<div class="section section--profile js-editable-section"> 
 			<h2>私はここで</h2> 
-			<!-- ボタン -->
+
 			<div class="inline btn btn--sm btn--white btn--ico btn-edit js-editable-section-btn">
 				<i class="icon ico--pencil"></i>
 				<span class="b-link js-editable-section-toggle" data-section-type="iht">
@@ -442,7 +267,8 @@
 				<div class="section-editable__view"> 私はここで、友達を作りたい 
 					<span>（女の子と，18-23歳）</span> 
 				</div>  
-				<!-- ボタン押した時の画面 -->
+				
+                ボタン押した時の画面 
 				<div class="section-editable__edit"> 
 					<form method="post" action="" class="table"> 
 						
@@ -470,9 +296,10 @@
 			</div> 
 		</div> 
 	</div> 
-	<div class="js-profile-university"></div> 
-	
-	<div class="js-profile-interests"></div>  
+     -->
+
+<!-- ４ボックス目、アップデート予定 -->
+    <!-- 
 	<div class="js-profile-about_me">
 		<div class="section section--profile js-editable-section"> 
 			<h2>私について</h2> 
@@ -482,7 +309,7 @@
 			</div> 
 			<div class="section-editable"> 
 				<div class="section-editable__view js-value">  
-					<p class="profile-section__txt js-wrap"><!-- -->
+					<p class="profile-section__txt js-wrap">
 		 			</p>   
 		 			<span class="grey profile-section__txt">あなたの気性、性格、人や人生に対する姿勢などについて書いてみましょう。例えば、他の人と違うところは？ポジティブなところ、ネガティブなところは？
 		 			</span>  
@@ -505,7 +332,7 @@
 		 	</div> 
 		</div> 
 	</div> 
-
+ -->
 	<div class="js-profile-languages">
 		<div class="section section--profile js-editable-section"> 
 			<h2>言語</h2> 

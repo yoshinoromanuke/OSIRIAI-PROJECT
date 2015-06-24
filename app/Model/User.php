@@ -4,6 +4,20 @@
 App::uses('AppModel', 'Model');
 
 class User extends AppModel {
+
+    var $actsAs = array(
+    'UploadPack.Upload' => array(
+        'image' => array(     ☆ここでは、"_file_name"を除いたカラム名を書く
+            'quality' => 95,   ☆画質指定、デフォルトでは75
+            'styles' => array(
+                'thumb' => '85x85'  ☆リサイズしたいサイズを書く
+            )
+        )
+    ),
+    );
+
+
+    
 	public $validate = array(
         'id' => array(
             'required' => array(

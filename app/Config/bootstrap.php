@@ -25,6 +25,16 @@
 // Setup a 'default' cache configuration for use in the application.
 Cache::config('default', array('engine' => 'File'));
 
+// facebooklogin from Load Composer autoload.
+require APP . 'Vendor/autoload.php';
+
+// Remove and re-prepend CakePHP's autoloader as Composer thinks it is the
+// most important.
+// See: http://goo.gl/kKVJO7
+spl_autoload_unregister(array('App', 'load'));
+spl_autoload_register(array('App', 'load'), true, true);
+//facebook login here
+
 /**
  * The settings below can be used to set additional paths to models, views and controllers.
  *
@@ -114,4 +124,5 @@ CakeLog::config('error', array(
 ));
 CakePlugin::load('DebugKit');
 CakePlugin::load('BoostCake');
+CakePlugin::load('Uploadpack');
 

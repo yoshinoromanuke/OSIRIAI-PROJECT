@@ -20,7 +20,33 @@
  */
 
 App::uses('Controller', 'Controller');
+// facebook login
+// App::import("Vendor", "FacebookSDK", array("file" => "php-sdk/autoload.php")); 
 
+App::import('Vendor', 'FacebookRedirectLoginHelper', array('file' => 'FacebookSDK' . DS . 'src' . DS . 'FacebookRedirectLoginHelper.php'));
+App::import('Vendor', 'FacebookSDKException', array('file' => 'FacebookSDK' . DS . 'src' . DS . 'FacebookSDKException.php'));
+App::import('Vendor', 'FacebookSession', array('file' => 'FacebookSDK' . DS . 'src' . DS . 'FacebookSession.php'));
+App::import('Vendor', 'FacebookRequest', ['file' => 'FacebookSDK' . DS . 'src' . DS . 'FacebookRequest.php']);
+App::import('Vendor', 'FacebookRequestException', ['file' => 'FacebookSDK' . DS . 'src' . DS . 'FacebookRequestException.php']);
+
+use Facebook\FacebookSession;
+use Facebook\FacebookRedirectLoginHelper;
+use Facebook\FacebookRequest;
+use Facebook\GraphUser;
+use Facebook\FacebookResponse;
+use Facebook\FacebookSDKException;
+use Facebook\FacebookRequestException;
+use Facebook\FacebookAuthorizationException;
+use Facebook\GraphObject;
+use Facebook\Entities\AccessToken;
+use Facebook\HttpClients\FacebookCurlHttpClient;
+use Facebook\HttpClients\FacebookHttpable;
+
+FacebookSession::setDefaultApplication('842599362476564', '9b60e0c53c2a83d6c0f11704bf69f0d5');
+
+
+
+//$helper = new new \Facebook\FacebookRedirectLoginHelper($redirect_url, '842599362476564', '9b60e0c53c2a83d6c0f11704bf69f0d5'); 
 /**
  * Application Controller
  *
@@ -46,13 +72,12 @@ class AppController extends Controller {
 
         'Auth' => array(
             'loginRedirect' => array(
-                'controller' => 'posts',
+                'controller' => 'users',
                 'action' => 'index'
             ),
             'logoutRedirect' => array(
-                'controller' => 'pages',
-                'action' => 'display',
-                'home'
+                'controller' => 'users',
+                'action' => 'login'
             ),
             'authenticate' => array(
                 'Form' => array(
@@ -71,7 +96,7 @@ class AppController extends Controller {
     )
     );
     public function beforeFilter() {
-//        $this->Auth->allow('index', 'view');
+        $this->Auth->allow();
     }
 
 
